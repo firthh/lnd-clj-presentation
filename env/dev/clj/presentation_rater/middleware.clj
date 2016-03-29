@@ -12,6 +12,5 @@
 (defn wrap-middleware [handler]
   (-> handler
       wrap-json-response
-      (wrap-defaults site-defaults)
       wrap-exceptions
       wrap-reload))
